@@ -1,0 +1,17 @@
+---
+# file: roles/idrac-alerts/defaults/main.yml
+
+lom_user: root
+lom_pass: pass
+
+# limit of 3
+syslog_servers:
+  - 10.10.10.10
+  - 10.10.10.11
+  - 10.10.10.12
+
+# only set this if you want to change from the default destination of 514
+# syslog_port: 514
+
+# Enable remote syslog for the iDRAC
+syslog_enabled: true
