@@ -9,30 +9,11 @@
     password: "{{ lom_pass }}"
     hostname: "{{ lom_hostname }}"
     command: 'SyslogSettings'
-    servers: "{{ syslog_servers }}"
-    enable: 'True'
-    port: 514
+    servers: "{{ idrac_syslog_servers }}"
+    enable: "{{ idrac_syslog_enable }}"
+    port: "{{ idrac_syslog_port }}"
     debug: True
-#  when: syslog_servers is defined
-#  #with_items: syslog_servers
+  when: syslog_servers is defined
   tags:
     - idrac_syslog
 
-#- name: Enable Remote Syslog for the iDRAC
-#  local_action:
-#    module: idrac
-#      username: {{ lom_user }}
-#      password: {{ lom_pass }}
-#      hostname: {{ lom_hostname }}
-#      command: EnableRemoteSyslog
-#  when: syslog_enabled|bool
-#  tags:
-#    - idrac_syslog
-#
-#- name: Set Syslog Destination Port
-#  local_action: idrac username={{ lom_user }} password={{ lom_pass }}
-#    hostname={{ lom_hostname }} command=SetSyslogPort
-#  when: syslog_port is defined
-#  tags:
-#    - idrac_syslog
-#
