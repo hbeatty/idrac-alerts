@@ -10,9 +10,6 @@
     hostname: "{{ lom_hostname }}"
     command: 'SyslogSettings'
     servers: "{{ idrac_syslog_servers }}"
-    enable: "{{ idrac_syslog_enable }}"
-    port: "{{ idrac_syslog_port }}"
-    debug: True
   when: syslog_servers is defined
   tags:
     - idrac_syslog
