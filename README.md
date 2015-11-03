@@ -10,17 +10,17 @@ lom_user: root
 lom_pass: pass
 
 # limit of 3
-syslog_servers:
+idrac_syslog_servers:
     - 10.10.10.10
     - 10.10.10.11
     - 10.10.10.12
 
 
 # only set this if you want to change from the default destination of 514
-# syslog_port: 514
+#idrac_syslog_port: 514
 
 # Enable remote syslog for the iDRAC
-syslog_enabled: true
+#idrac_syslog_enabled: true
 ```
 
 ## Handlers - handlers/main.yml
