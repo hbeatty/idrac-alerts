@@ -1,4 +1,4 @@
-# idrac-alerts
+# idrac-alerts - deprecated See idrac-roles
 Ansible role that works with the [iDRAC Ansible module](https://github.com/hbeatty/iDRAC-Ansible-module). Sets the values for the alerting in the iDRAC.
 
 ## Tasks - tasks/main.yml
